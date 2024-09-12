@@ -1,9 +1,9 @@
 
 
-interface menuItem{
-    link:string,
-    icon:string,
-    text:string,
+export interface menuItem{
+    link:string;
+    icon:string;
+    text:string;
     toRead:number
 }
 

@@ -1,13 +1,25 @@
 
-interface btnProps{
-    text:string, 
-    color : string,
-    fontStyle:string
+interface btnProps {
+    text: string,
+    color: string,
+    fontStyle?: string
 }
 
 
-function Button({text, color, fontStyle}:btnProps){
-    const btnColorClass = (color=="primary")? " bg-blue-500 " + fontStyle : "bg-gray-500"
+function Button({ text, color, fontStyle }: btnProps) {
+    let btnColorClass = ""
+
+    switch (color) {
+        case "primary":
+            btnColorClass= ` bg-blue-500 ${fontStyle}`
+            break
+        case "white":
+            btnColorClass= ` bg-textcolor text-black ${fontStyle}`
+            break
+        default:
+            btnColorClass= `bg-blue-500 ${fontStyle}`;
+    }
+
     return (
         <button className={"p-3 font-bold rounded-3xl " + btnColorClass}>{text}</button>
     )

@@ -55,3 +55,7 @@ body{
 #root{
     height : 100vh;
 }
+
+.timeline{
+    width: 600px;
+}
