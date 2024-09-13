@@ -138,7 +138,7 @@ const tweets: Tweet[] = [
 
 function Timeline() {
     return (
-        <div className="flex flex-col relative h-full max-w-2xl border-l border-r border-gray-700 timeline">
+        <div className="flex flex-col relative max-w-2xl border-l border-r border-gray-700 timeline h-[100vh] overflow-scroll">
             <Header selected="recommended"></Header>
             <TweetEditor profile={profileIcon}></TweetEditor>
             {tweets.map((tweet) => (

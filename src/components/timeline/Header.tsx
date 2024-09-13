@@ -6,15 +6,15 @@ function Header({selected}:menuProps){
     const dividerClass = (selected=="recommended")? " border-b-4 border-blue-600 font-bold":""
     const dividerClass2 = (selected=="subscribe")? " border-b-4 border-blue-600 font-bold":""
     return(
-        <div className="grid grid-cols-2 w-full min-w-fit h-14 border-b border-gray-700">
-            <div className="flex items-center justify-center h-full cursor-pointer hover:bg-gray-600 hover:bg-opacity-50">
-                <div className={"flex w-fit h-full items-center "+ dividerClass}>
+        <div className="grid grid-cols-2 w-full border-b border-gray-700 min-w-14">
+            <div className="flex items-center justify-center cursor-pointer hover:bg-gray-600 hover:bg-opacity-50">
+                <div className={"flex w-fit h-full items-center pt-4 pb-4"+ dividerClass}>
                     <p className="">Pour vous</p>
                 </div>
                 
             </div>
-            <div className="flex items-center justify-center h-full cursor-pointer hover:bg-gray-600 hover:bg-opacity-50">
-                <div className={"flex w-fit h-full items-center "+ dividerClass2}>
+            <div className="flex items-center justify-center cursor-pointer hover:bg-gray-600 hover:bg-opacity-50">
+                <div className={"flex w-fit h-full items-center pt-4 pb-4"+ dividerClass2}>
                     <p className="">Abonnements</p>
                 </div>
                 
