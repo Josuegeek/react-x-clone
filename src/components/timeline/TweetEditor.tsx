@@ -10,7 +10,7 @@ function TweetEditor({ profile }: props) {
     return (
         <form className="flex flex-row w-full pt-4 pl-4 pr-4 gap-2 border-b border-gray-700 pb-4" action="">
             <Profile profile={profile}></Profile>
-            <div className="flex flex-col gap-2 w-full ">
+            <div className="flex flex-col gap-2 flex-1">
                 <AutoResizeTextarea className="bg-black placeholder-gray-600 h-auto min-h-18"
                     name="tweetText" id="tweetText"
                     placeholder="Quoi de neuf ?!"></AutoResizeTextarea>

@@ -138,12 +138,15 @@ const tweets: Tweet[] = [
 
 function Timeline() {
     return (
-        <div className="flex flex-col relative max-w-2xl border-l border-r border-gray-700 timeline h-[100vh] overflow-y-scroll hide-scrollbar">
+        <div className="flex flex-col relative max-w-2xl border-l border-r border-gray-700 timeline h-[100vh] 
+        overflow-y-scroll hide-scrollbar max-[499px]:w-full">
             <Header selected="recommended"></Header>
-            <TweetEditor profile={profileIcon}></TweetEditor>
-            {tweets.map((tweet) => (
-                <TweetItem {...tweet}></TweetItem>
-            ))}
+            <div className="flex flex-col flex-1 overflow-y-auto hide-scrollbar">
+                <TweetEditor profile={profileIcon}></TweetEditor>
+                {tweets.map((tweet) => (
+                    <TweetItem {...tweet}></TweetItem>
+                ))}
+            </div>
         </div>
     )
 }

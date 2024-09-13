@@ -15,7 +15,7 @@ function MenuItem({link, icon, text, toRead}:menuItem){
         <a href={link} className="flex flex-row relative gap-2 p-3 rounded-3xl items-center hover:bg-gray-600 hover:bg-opacity-50 transition-all duration-200">
             <div className={classList}>{toRead}</div>
             <img className="w-6 h-6 text-textcolor" src={icon} alt="menuIcon-" />
-            <p className="text-lg">{text}</p>
+            <p className="text-lg hidden xl:inline">{text}</p>
         </a>
     )
 }

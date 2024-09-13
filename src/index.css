@@ -68,3 +68,7 @@ body{
     -ms-overflow-style: none; 
     scrollbar-width: none; 
 }
+
+.display-none{
+    display: none;
+}

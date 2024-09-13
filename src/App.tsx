@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='text-textcolor font-twitter w-full flex flex-row justify-center h-fit'>
+      <div className='text-textcolor font-twitter w-full flex flex-row justify-center h-fit gap-2'>
         <MenuContainer></MenuContainer>
         <Timeline></Timeline>
         <RightSection></RightSection>
