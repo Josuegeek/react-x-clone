@@ -1,4 +1,4 @@
-import Header from "./header"
+import Header from "./Header"
 import TweetEditor from "./TweetEditor"
 import profileIcon from "../../assets/profile.svg"
 import TweetItem, { Tweet } from "../post/Tweet";

@@ -1,5 +1,5 @@
 import moreIcon from "../../assets/more.svg"
-import Profile from "../profile"
+import Profile from "../Profile"
 
 export interface Tweet {
     tweet_image: string

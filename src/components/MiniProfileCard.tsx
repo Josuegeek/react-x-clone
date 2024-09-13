@@ -1,6 +1,6 @@
 import moreIcon from "../assets/more.svg"
 import Button from "./Button"
-import Profile from "./profile"
+import Profile from "./Profile"
 
 export interface profileInfo {
     profile: string,

@@ -1,4 +1,4 @@
-import Profile from "../profile"
+import Profile from "../Profile"
 import Button from "../Button"
 import AutoResizeTextarea from "../AutoResizeTextArea"
 
