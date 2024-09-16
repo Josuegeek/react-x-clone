@@ -23,10 +23,11 @@ const menuList : menuItem[]=[
 function MenuContainer() {
 
     return (
-        <div className=" absolute min-[500px]:relative min-[500px]:flex bottom-0 flex-col justify-between p-3 
+        <div className=" absolute min-[500px]:relative min-[500px]:flex -bottom-1 flex-col justify-between p-3 
                             sm:w-[75px] xl:w-[260px] md:ml-4 md:mr-4 min-[500px]:h-[100vh] bg-black z-50 max-[499px]:w-full">
             <div className="flex min-[500px]:flex-col justify-between">
-                <svg className=" h-6 w-6 ml-3 mb-3 max-[499px]:absolute max-[499px]:-top-[90vh] max-[499px]:w-full"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <svg className=" h-6 w-6 ml-3 mb-3 max-[499px]:absolute max-[499px]:-top-[86vh] max-[499px]:w-full 
+                                max-[499px]:left-0 max-[499px]:m-0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                     <path fill="currentColor" d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z" />
                 </svg>
                 {menuList.map((menuItem) => (

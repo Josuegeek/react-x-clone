@@ -18,7 +18,7 @@ function MiniProfileCard({ profile, name, username, certified, link, followLink 
     if(!followLink){
         profileNamesClass="hidden xl:flex xl:flex-col"
         padding="p-0 mb-3"
-        profileClass="max-[499px]:absolute max-[499px]:-top-[90vh]"
+        profileClass="max-[499px]:absolute max-[499px]:-top-[88vh]"
     }
 
     return (
