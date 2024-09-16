@@ -139,7 +139,7 @@ const tweets: Tweet[] = [
 function Timeline() {
     return (
         <div className="flex flex-col relative max-w-2xl border-l border-r border-gray-700 timeline h-[100vh] 
-        overflow-y-scroll hide-scrollbar max-[499px]:w-full">
+        overflow-y-scroll hide-scrollbar max-[499px]:w-full max-sm:border-none">
             <Header selected="recommended"></Header>
             <div className="flex flex-col flex-1 overflow-y-auto hide-scrollbar">
                 <TweetEditor profile={profileIcon}></TweetEditor>
