@@ -18,11 +18,11 @@ function MiniProfileCard({ profile, name, username, certified, link, followLink 
     if(!followLink){
         profileNamesClass="hidden xl:flex xl:flex-col"
         padding="p-0 mb-3"
-        profileClass="max-[499px]:absolute max-[499px]:-top-[88vh]"
+        profileClass="max-[499px]:absolute max-[499px]:-top-[88.5vh]"
     }
 
     return (
-        <a href={link} className={`flex flex-row ${padding} ${profileClass} justify-between gap-2 items-center cursor-pointer hover:bg-gray-600 hover:bg-opacity-50 rounded-full transition-all duration-200`}>
+        <a href={link} className={`flex flex-row ${padding} ${profileClass} justify-between gap-2 items-center cursor-pointer hover:bg-gray-600 hover:bg-opacity-50 rounded-full transition-all duration-200 p-2`}>
             <div className="flex flex-row gap-2 items-center">
                 <Profile profile={profile}></Profile>
                 <div className={profileNamesClass}>
