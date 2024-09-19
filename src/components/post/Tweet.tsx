@@ -22,7 +22,7 @@ function TweetItem({ tweet_image, profile, text_content, author, author_username
 
             <div className="flex flex-col gap-1">
                 <div className="flex flex-row justify-between items-center">
-                    <div className="flex gap-1 items-center">
+                    <div className="flex items-center flex-wrap">
                         <p className="font-bold text-[1.03rem]">{author} </p>
                         {(certified) ? <svg fill="currentColor" className="text-blue-500 w-4" viewBox="0 0 22 22" aria-label="Compte certifié" role="img"
                             data-testid="icon-verified"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 
