@@ -14,7 +14,7 @@ const trendList: TrendProps[] = [
 ]
 
 const profileToFollow: profileInfo[] = [
-    { profile: profileIcon, name: "Profile Name", username: "username", certified: true, followLink: "link", link: "" },
+    { profile: profileIcon, name: "Profile Name", username: "username", certified: true, link: "" },
     { profile: profileIcon, name: "Profile Name", username: "username", certified: false, followLink: "link", link: "" },
     { profile: profileIcon, name: "Profile Name", username: "username", certified: false, followLink: "link", link: "" },
     { profile: profileIcon, name: "Profile Name", username: "username", certified: true, followLink: "link", link: "" },
