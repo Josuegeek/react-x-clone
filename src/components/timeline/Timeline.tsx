@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import axios from 'axios'
 import Loader from "../Loader"
 import { Tweet } from "../../models/Tweet"
+import Button from "../Button"
 
 interface TimelineProps{
     tweetss?:Tweet[]
@@ -47,10 +48,19 @@ function Timeline({tweetss, headerType}:TimelineProps) {
             <div className="flex flex-col flex-1 overflow-y-auto hide-scrollbar max-[499px]:mb-20">
                 <Header headerType="home"></Header>
                 <TweetEditor profile={"https://randomuser.me/api/portraits/men/3.jpg"}></TweetEditor>
-                {(loading)? <Loader/>: tweets.map((tweet) => (
+                {(loading)? <Loader/> : (!error) && tweets.map((tweet) => (
                     <TweetItem {...tweet}></TweetItem>
                 ))}
-                {error && <p className="text-red-500">{error}</p>}
+                {error && 
+                    <div className="w-full flex flex-col gap-3 items-center">
+                        <p className="text-red-500 p-4 w-full text-center">{error}</p>
+                        <Button text="Actualiser" color="primary" onClick={fetchData} icon={<svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24">
+                                                                                                <path fill="currentColor"
+                                                                                                    d="M12 22c5.421 0 10-4.579 10-10h-2c0 4.337-3.663 8-8 8s-8-3.663-8-8s3.663-8 
+                                                                                                    8-8V2C6.579 2 2 6.58 2 12c0 5.421 4.579 10 10 10"/>
+                                                                                            </svg>}/>
+                    </div>
+                }    
             </div>
         </div>
     )

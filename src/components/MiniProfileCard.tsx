@@ -47,7 +47,7 @@ function MiniProfileCard({ userId }: profileInfo) {
 
     return (
         <div className={`flex flex-row ${padding} ${profileClass} justify-between gap-2 items-center cursor-pointer hover:bg-gray-600 hover:bg-opacity-50 rounded-full transition-all duration-200`}>
-            {(loading) ? <Loader /> :
+            {(loading) ? <Loader /> : (!error) &&
                 <div className={`flex flex-row justify-between gap-2 items-center cursor-pointer w-full`}>
                     <div className="flex flex-row gap-2 items-center">
                         <Link to={`profile/${user?.id}`}><Profile profile={user?.profilePicture}></Profile></Link>

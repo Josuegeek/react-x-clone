@@ -1,22 +1,25 @@
+import { FC } from "react"
 
 interface btnProps {
     text: string,
     color: string,
-    fontStyle?: string
+    fontStyle?: string,
+    onClick?:() => void,
+    icon?:React.ReactNode
 }
 
 
-function Button({ text, color, fontStyle }: btnProps) {
+function Button({ text, color, fontStyle, onClick, icon }: btnProps) {
     let btnColorClass = "",
     textClass = "",
     iconClass = "hidden"
 
     switch (color) {
         case "primary":
-            btnColorClass = ` bg-blue-500 ${fontStyle}`
+            btnColorClass = ` w-fit bg-blue-500 ${fontStyle}`
             break
         case "white":
-            btnColorClass = ` bg-textcolor text-black ${fontStyle}`
+            btnColorClass = ` w-fit bg-textcolor text-black ${fontStyle}`
             break
         case "primary menu":
             btnColorClass = ` bg-blue-500 ${fontStyle} w-[50px] h-[50px] xl:w-full max-[499px]:absolute max-[499px]:-top-[80px] max-[499px]:right-3`
@@ -28,7 +31,8 @@ function Button({ text, color, fontStyle }: btnProps) {
     }
 
     return (
-        <button className={"flex p-2 font-bold rounded-3xl text-sm text-center items-center justify-center " + btnColorClass}>
+        <button onClick={onClick} className={"flex p-2 font-bold rounded-3xl text-sm text-center items-center justify-center gap-2 " + btnColorClass}>
+            {(icon) && icon}
             <p className={textClass}>{text}</p>
             <svg className={iconClass} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><g>
                 <path d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 
