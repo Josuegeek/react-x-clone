@@ -1,17 +1,21 @@
-import MenuContainer from './components/menu/MenuContainer'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import Timeline from './components/timeline/Timeline'
-import RightSection from './components/right-section/RightSection'
+import Home from "./pages/HomePage";
+import Profile from "./pages/ProfllePage";
 
 function App() {
 
   return (
     <>
-      <div className='text-textcolor font-twitter w-full flex flex-row justify-center h-fit gap-2'>
-        <MenuContainer></MenuContainer>
-        <Timeline></Timeline>
-        <RightSection></RightSection>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/profile/:username" element={<Profile />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+      
     </>
   )
 }

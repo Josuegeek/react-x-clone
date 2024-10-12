@@ -1,13 +1,13 @@
 import MenuItem, { menuItem } from "./MenuItem"
-import homeIcon from "../../assets/home.fill.svg"
-import exploreIcon from "../../assets/search.svg"
-import notificationIcon from "../../assets/notifications.svg"
-import messageIcon from "../../assets/message.svg"
-import profileIcon from "../../assets/profile.svg"
-import listIcon from "../../assets/list.svg"
-import moreRoundedIcon from "../../assets/more.circle.svg"
+import homeIcon from "/imgs/home.fill.svg"
+import exploreIcon from "/imgs/search.svg"
+import notificationIcon from "/imgs/notifications.svg"
+import messageIcon from "/imgs/message.svg"
+import profileIcon from "/imgs/profile.svg"
+import listIcon from "/imgs/list.svg"
+import moreRoundedIcon from "/imgs/more.circle.svg"
 import MiniProfileCard from "../MiniProfileCard"
-import user from "../../assets/profile.fill.svg"
+import user from "/imgs/profile.fill.svg"
 import Button from "../Button"
 
 const menuList : menuItem[]=[
@@ -16,7 +16,7 @@ const menuList : menuItem[]=[
     {icon:notificationIcon, link:"/notifications", text:"Notifications", toRead:2},
     {icon:messageIcon, link:"/mesages", text:"Messages", toRead:5},
     {icon:listIcon, link:"/lists", text:"Lists", toRead:0},
-    {icon:profileIcon, link:"/profile", text:"Profile", toRead:0},
+    {icon:profileIcon, link:"/profile/1", text:"Profile", toRead:0},
     {icon:moreRoundedIcon, link:"/more", text:"More", toRead:0}
 ]
 
@@ -24,7 +24,7 @@ function MenuContainer() {
 
     return (
         <div className=" absolute min-[500px]:relative min-[500px]:flex -bottom-1 flex-col justify-between p-3 
-                            sm:w-[75px] xl:w-[260px] md:ml-4 md:mr-4 min-[500px]:h-[100vh] bg-black z-50 max-[499px]:w-full">
+                            sm:w-[70px] xl:w-[260px] md:ml-4 md:mr-4 min-[500px]:w-[60px] min-[500px]:h-[100vh] bg-black z-50 max-[499px]:w-full">
             <div className="flex min-[500px]:flex-col justify-between">
                 <svg className=" h-6 w-6 ml-3 mb-3 max-[499px]:absolute max-[499px]:-top-[86vh] max-[499px]:w-full 
                                 max-[499px]:left-0 max-[499px]:m-0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -35,7 +35,7 @@ function MenuContainer() {
                 ))}
                 <Button text="Poster" color="primary menu" fontStyle="font-bold mt-4"></Button>
             </div>
-            <MiniProfileCard link="" certified={true} profile={user} username="username" name="user name" ></MiniProfileCard>
+            <MiniProfileCard userId={1} ></MiniProfileCard>
         </div>
     )
 }

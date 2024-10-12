@@ -1,6 +1,6 @@
 import { TrendProps } from "./Trend";
 import Trend from "./Trend";
-import settingsIcon from "../../assets/settings.svg"
+import settingsIcon from "/imgs/settings.svg"
 
 interface listProps {
     list: TrendProps[]

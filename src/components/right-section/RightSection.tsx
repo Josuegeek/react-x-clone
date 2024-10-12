@@ -2,7 +2,6 @@ import { TrendProps } from "./Trend"
 import TrendList from "./TrendsList"
 import FollowList from "./FollowList"
 import SearchBar from "../SearchBar"
-import profileIcon from "../../assets/profile.fill.svg"
 import { profileInfo } from "../MiniProfileCard"
 
 
@@ -14,11 +13,11 @@ const trendList: TrendProps[] = [
 ]
 
 const profileToFollow: profileInfo[] = [
-    { profile: profileIcon, name: "Profile Name", username: "username", certified: true, link: "" },
-    { profile: profileIcon, name: "Profile Name", username: "username", certified: false, followLink: "link", link: "" },
-    { profile: profileIcon, name: "Profile Name", username: "username", certified: false, followLink: "link", link: "" },
-    { profile: profileIcon, name: "Profile Name", username: "username", certified: true, followLink: "link", link: "" },
-    { profile: profileIcon, name: "Profile Name", username: "username", certified: true, followLink: "link", link: "" }
+    { userId:3},
+    { userId:5},
+    { userId:2},
+    { userId:4},
+    { userId:6}
 ]
 
 function RightSection() {

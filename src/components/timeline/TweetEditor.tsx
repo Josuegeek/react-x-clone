@@ -1,6 +1,7 @@
 import Profile from "../Profile"
 import Button from "../Button"
 import AutoResizeTextarea from "../AutoResizeTextArea"
+import { Link } from "react-router-dom"
 
 interface props {
     profile: string
@@ -9,7 +10,7 @@ interface props {
 function TweetEditor({ profile }: props) {
     return (
         <form className="flex flex-row w-full pt-4 pl-4 pr-4 gap-2 border-b border-gray-700 pb-4" action="">
-            <Profile profile={profile}></Profile>
+            <Link to="profile/1"><Profile profile={profile}></Profile></Link>
             <div className="flex flex-col gap-2 flex-1">
                 <AutoResizeTextarea className="bg-black placeholder-gray-600 h-auto min-h-18"
                     name="tweetText" id="tweetText"
