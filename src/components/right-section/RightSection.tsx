@@ -3,6 +3,7 @@ import TrendList from "./TrendsList"
 import FollowList from "./FollowList"
 import SearchBar from "../SearchBar"
 import { profileInfo } from "../MiniProfileCard"
+import { useEffect, useState } from "react"
 
 
 const trendList: TrendProps[] = [
@@ -20,7 +21,21 @@ const profileToFollow: profileInfo[] = [
     { userId:6}
 ]
 
-function RightSection() {
+interface rightSectionProps{
+    reload?:boolean
+}
+
+function RightSection({reload}:rightSectionProps) {
+
+    const [reloading, setReloading]=useState<boolean>(false)
+
+    useEffect(
+        ()=>{
+            if(reload)
+                setReloading(reload)
+        }
+    )
+
     return (
         <div className="lg:flex flex-col hidden p-3 pb-0 mb-2 h-[100vh] overflow-y-scroll hide-scrollbar lg:w-[350px]">
             <SearchBar></SearchBar>
