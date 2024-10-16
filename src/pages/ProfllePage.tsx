@@ -20,7 +20,7 @@ export default function Profile() {
         setError(null) // Réinitialiser l'erreur
         console.log(tweets)
         try {
-            const response = await axios.get(import.meta.env.VITE_URL_API +`tweets`);
+            const response = await axios.get(import.meta.env.VITE_URL_API +`tweets?userId=${username}`);
             //setTweets(response.data); // Mettre à jour les données
             setTweets(response.data.sort((a:Tweet, b:Tweet) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()))
         } catch (err) {
