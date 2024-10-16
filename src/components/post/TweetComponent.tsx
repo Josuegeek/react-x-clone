@@ -8,7 +8,7 @@ import Loader from "../Loader";
 import moment from 'moment';
 import { Link } from "react-router-dom";
 
-function TweetItem({ createdAt, retweets, likes, comments, numberShare, content, tweetId, userId, image }: Tweet) {
+function TweetItem({ createdAt, retweets, likes, comments, numberShare, content, userId, image }: Tweet) {
 
     const [user, setUser] = useState<User>()
 

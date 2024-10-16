@@ -38,6 +38,7 @@ export default function Profile() {
         <div className='text-textcolor font-twitter w-full flex flex-row justify-center h-fit gap-2'>
             <MenuContainer></MenuContainer>
             {username}
+            <Timeline tweets={tweets} headerType="profile" loading={loading} error={error} onReloadClick={fetchData}></Timeline>
             <RightSection></RightSection>
         </div>
     )

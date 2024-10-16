@@ -34,9 +34,9 @@ export default function Home(){
 
     return (
         <div className='text-textcolor font-twitter w-full flex flex-row justify-center h-fit gap-2'>
-            <MenuContainer reload={loading}></MenuContainer>
+            <MenuContainer></MenuContainer>
             <Timeline loading={loading} tweets={tweets} error={error} onReloadClick={fetchData} headerType='home'></Timeline>
-            <RightSection reload={loading}></RightSection>
+            <RightSection></RightSection>
         </div>
     )
 }

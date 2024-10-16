@@ -7,7 +7,6 @@ import profileIcon from "/imgs/profile.svg"
 import listIcon from "/imgs/list.svg"
 import moreRoundedIcon from "/imgs/more.circle.svg"
 import MiniProfileCard from "../MiniProfileCard"
-import user from "/imgs/profile.fill.svg"
 import Button from "../Button"
 
 const menuList : menuItem[]=[
