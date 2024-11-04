@@ -25,12 +25,15 @@ function Button({ text, color, fontStyle, onClick, icon }: btnProps) {
             textClass = "hidden xl:inline xl:w-full text-lg"
             iconClass="text-textcolor h-6 xl:hidden"
             break
+        case "outlined":
+            btnColorClass = ` border border-gray-500 ${fontStyle} hover:bg-gray-800`
+            break;
         default:
             btnColorClass = `bg-blue-500 ${fontStyle}`;
     }
 
     return (
-        <button onClick={onClick} className={"flex p-2 font-bold rounded-3xl text-sm text-center items-center justify-center gap-2 " + btnColorClass}>
+        <button onClick={onClick} className={"flex p-2 font-bold rounded-3xl text-sm text-center items-center justify-center gap-2 pl-5 pr-5 " + btnColorClass}>
             {(icon) && icon}
             <p className={textClass}>{text}</p>
             <svg className={iconClass} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><g>

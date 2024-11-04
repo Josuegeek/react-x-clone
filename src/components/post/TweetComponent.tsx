@@ -64,7 +64,7 @@ function TweetItem({ createdAt, retweets, likes, comments, numberShare, content,
             {
                 (loading) ? <Loader /> :
                     <div className="flex flex-row pl-4 pt-1 pr-4 pb-2 gap-2 w-full border-b border-b-gray-700">
-                        <Link className="min-w-[2.5rem]" to={"profile/" + userId}>
+                        <Link className="min-w-[2.5rem]" to={"/profile/" + userId}>
                             <Profile profile={user?.profilePicture}></Profile>
                         </Link>
 
@@ -72,7 +72,7 @@ function TweetItem({ createdAt, retweets, likes, comments, numberShare, content,
                         <div className="flex flex-col gap-1">
                             <div className="flex flex-row justify-between items-center">
                                 <div className="flex items-center flex-wrap gap-1">
-                                    <Link to={"profile/" + userId}><p className="font-bold text-[1.03rem]">{user?.name} </p></Link>
+                                    <Link to={"/profile/" + userId}><p className="font-bold text-[1.03rem]">{user?.name} </p></Link>
 
                                     {(user?.certified) && <svg fill="currentColor" className="text-blue-500 w-4" viewBox="0 0 22 22" aria-label="Compte certifié" role="img"
                                         data-testid="icon-verified"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 

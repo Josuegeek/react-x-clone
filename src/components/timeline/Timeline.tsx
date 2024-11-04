@@ -16,7 +16,7 @@ interface TimelineProps{
 function Timeline({tweets, headerType, loading, error, onReloadClick}:TimelineProps) {
     
     return (
-        <div className="flex flex-col relative max-w-2xl border-l border-r border-gray-700 timeline h-[100vh] 
+        <div className="flex flex-col relative max-w-2xl timeline h-[100vh] 
         overflow-y-scroll hide-scrollbar max-[499px]:w-full max-[499px]:border-none">
 
             <div className="flex flex-col flex-1 overflow-y-auto hide-scrollbar max-[499px]:mb-20">
