@@ -33,7 +33,7 @@ export default function Home(){
     }, []);
 
     return (
-        <div className='text-textcolor font-twitter w-full flex flex-row justify-center h-fit gap-2'>
+        <div className='text-textcolor font-twitter w-full flex flex-row justify-center h-screen gap-2'>
             <MenuContainer></MenuContainer>
             <div className='border-l border-r border-gray-700'>
                 <Timeline loading={loading} tweets={tweets} error={error} onReloadClick={fetchData} headerType='home'></Timeline>
