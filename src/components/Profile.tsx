@@ -9,7 +9,7 @@ interface props{
 
 function Profile({profile, className}:props){
     return (
-        <img className={`w-[2.5rem] h-[2.5rem] min-w-[2.5rem] rounded-full bg-blue-700 ${className}`} 
+        <img className={`w-[2.8rem] h-[2.8rem] min-w-[2.8rem] rounded-full bg-blue-700 ${className}`} 
             src={profile? profile:profileIcon} alt="Profile image"/>
     )
 }

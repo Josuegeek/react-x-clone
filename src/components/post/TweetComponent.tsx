@@ -64,12 +64,12 @@ function TweetItem({ createdAt, retweets, likes, comments, numberShare, content,
             {
                 (loading) ? <Loader /> :
                     <div className="flex flex-row pl-4 pt-1 pr-4 pb-2 gap-2 w-full border-b border-b-gray-700">
-                        <Link className="min-w-[2.5rem]" to={"/profile/" + userId}>
+                        <Link to={"/profile/" + userId}>
                             <Profile profile={user?.profilePicture}></Profile>
                         </Link>
 
 
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col gap-1 pr-5">
                             <div className="flex flex-row justify-between items-center">
                                 <div className="flex items-center flex-wrap gap-1">
                                     <Link to={"/profile/" + userId}><p className="font-bold text-[1.03rem]">{user?.name} </p></Link>
@@ -84,7 +84,7 @@ function TweetItem({ createdAt, retweets, likes, comments, numberShare, content,
                                 <img className="w-4" src={moreIcon} alt="more Icon" />
                             </div>
                             <p>{content}</p>
-                            {(image) ? <img className="w-100 border rounded-3xl" src={image} alt="more Icon" /> : ''}
+                            {(image) ? <img className="w-full border rounded-3xl" src={image} alt="more Icon" /> : ''}
                             <div className="flex justify-between p-1 ">
                                 <div className="flex items-center">
                                     <div className="w-8 h-8 p-2 rounded-full hover:bg-gray-600 hover:bg-opacity-30 cursor-pointer ">

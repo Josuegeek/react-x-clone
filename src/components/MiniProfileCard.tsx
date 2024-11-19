@@ -8,18 +8,20 @@ import { Link } from "react-router-dom";
 import Loader from "./Loader";
 
 export interface profileInfo {
-    userId: number
+    userId: number,
+    type:string
 }
 
-function MiniProfileCard({ userId }: profileInfo) {
+function MiniProfileCard({ userId, type }: profileInfo) {
 
     const [user, setUser] = useState<User>()
-    const [profileNamesClass, setProfileNameClass] = useState<string>("")
 
     const [loading, setLoading] = useState<boolean>(true)
     const [error, setError] = useState<string | null>(null)
 
-    let padding = "p-3", profileClass = ""
+    let padding = (type!="menu")? "p-3":"max-[499px]:mb-5 max-[499px]:p-0", 
+        profileClass = (type=="menu")? " max-[499px]:absolute max-[499px]:pl-2 max-[499px]:-top-[89.5vh]":"",
+        profileNamesClass=(type=="menu")? "hidden xl:flex xl:flex-col":""
 
     const fetchData = async () => {
         setLoading(true);
@@ -28,11 +30,6 @@ function MiniProfileCard({ userId }: profileInfo) {
         try {
             const response = await axios.get(import.meta.env.VITE_URL_API + `users/${userId}`);
             setUser(response.data)
-            if (user?.id === 1) {
-                setProfileNameClass("hidden xl:flex xl:flex-col")
-                padding = "p-0 mb-3"
-                profileClass = "max-[499px]:absolute max-[499px]:-top-[88.5vh]"
-            }
         } catch (err) {
             setError('Erreur lors de la récupération des données');
         } finally {

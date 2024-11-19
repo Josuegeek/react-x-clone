@@ -17,11 +17,13 @@ interface TimelineProps {
 function Timeline({ tweets, headerType, loading, error, onReloadClick, className }: TimelineProps) {
 
     return (
-        <div className={`${className} flex flex-col relative max-w-2xl w-[600px] h-full hide-scrollbar max-[499px]:mb-20
-            overflow-y-scroll hide-scrollbar max-[499px]:w-full max-[499px]:border-none`}>
+        <div className={`${className} flex flex-col relative max-w-[600px] max-[768px]:flex-1 max-[768px]:min-w-[25rem] h-full hide-scrollbar max-[499px]:mb-20
+            overflow-y-scroll scrollbar-hidden max-[499px]:w-full max-[499px]:border-none`}>
 
             <Header headerType={headerType}></Header>
-            <TweetEditor profile={"https://randomuser.me/api/portraits/men/3.jpg"}></TweetEditor>
+            <div className="max-[499px]:hidden">
+                <TweetEditor profile={"https://randomuser.me/api/portraits/men/3.jpg"}></TweetEditor>
+            </div>
             {(loading) ? <Loader /> : (!error && tweets) && tweets.map((tweet) => (
                 <TweetItem {...tweet}></TweetItem>
             ))}

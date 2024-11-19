@@ -15,25 +15,26 @@ function Button({ text, color, fontStyle, onClick, icon }: btnProps) {
 
     switch (color) {
         case "primary":
-            btnColorClass = ` w-fit bg-blue-500 ${fontStyle}`
+            btnColorClass = ` w-fit bg-blue-500 ${fontStyle} pl-5 pr-5 `
             break
         case "white":
-            btnColorClass = ` w-fit bg-textcolor text-black ${fontStyle}`
+            btnColorClass = ` w-fit bg-textcolor text-black ${fontStyle} pl-5 pr-5 `
             break
         case "primary menu":
-            btnColorClass = ` bg-blue-500 ${fontStyle} w-[50px] h-[50px] xl:w-full max-[499px]:absolute max-[499px]:-top-[80px] max-[499px]:right-3`
-            textClass = "hidden xl:inline xl:w-full text-lg"
+            btnColorClass = ` bg-blue-500 ${fontStyle} w-[55px] h-[50px] xl:w-full max-[499px]:absolute rounded-full
+                             max-[499px]:-top-[90px] max-[499px]:right-5 max-[499px]:shadow-[0_0_10px_rgba(255,255,255,0.4)]`
+            textClass = "hidden xl:inline xl:w-full text-[1.2rem]"
             iconClass="text-textcolor h-6 xl:hidden"
             break
         case "outlined":
-            btnColorClass = ` border border-gray-500 ${fontStyle} hover:bg-gray-800`
+            btnColorClass = ` border border-gray-500 ${fontStyle} hover:bg-gray-800 pl-5 pr-5 `
             break;
         default:
             btnColorClass = `bg-blue-500 ${fontStyle}`;
     }
 
     return (
-        <button onClick={onClick} className={"flex p-2 font-bold rounded-3xl text-sm text-center items-center justify-center gap-2 pl-5 pr-5 " + btnColorClass}>
+        <button onClick={onClick} className={"flex p-2 font-bold rounded-3xl text-sm text-center items-center justify-center gap-2 " + btnColorClass}>
             {(icon) && icon}
             <p className={textClass}>{text}</p>
             <svg className={iconClass} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><g>

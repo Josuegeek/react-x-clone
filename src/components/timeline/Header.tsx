@@ -23,7 +23,7 @@ function Header({ selected, headerType }: menuProps) {
 
     return (
         (headerType == "home") ?
-            <div className="grid grid-cols-2 w-full border-b border-gray-700 min-h-14 max-[499px]:pt-14
+            <div className="grid grid-cols-2 w-full border-b border-gray-700 max-[499px]:pt-14
                             bg-black bg-opacity-25 backdrop-blur-sm sticky top-0">
                 <div className="flex items-center justify-center cursor-pointer bg-transparent hover:bg-gray-600 hover:bg-opacity-50"
                     onClick={() => {
