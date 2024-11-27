@@ -1,6 +1,6 @@
 import Header from "./Header"
 import TweetEditor from "./TweetEditor"
-import TweetItem from "../post/TweetComponent"
+import TweetItem from "../TweetComponent"
 import Loader from "../Loader"
 import { Tweet } from "../../models/Tweet"
 import Button from "../Button"
